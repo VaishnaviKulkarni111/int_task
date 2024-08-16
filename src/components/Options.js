@@ -1,4 +1,6 @@
 import { useState } from "react"
+import './options.css'
+
 const Options =(props) =>{
    const [dropdn, showdropdn] = useState()
 
