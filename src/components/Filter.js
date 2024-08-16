@@ -1,16 +1,19 @@
 import './filter.css'
+import { useState } from 'react';
+import Options from './Options';
 
+const Filter =() =>{
+    const [showDropdn, setShowDropdn] = useState(false);
 
-const Filter =(props) =>{
-    function Open(props){
-    
-     console.log('button is working')
-    }
-
+  const toggleDropdown = () => {
+    setShowDropdn(!showDropdn);
+  };
+   
 
     return(
         <>
-        <button onClick={Open}>Filters</button>
+        <Options showDropdn={showDropdn} toggleDropdn={toggleDropdown}/>
+        
         </>
     )
 

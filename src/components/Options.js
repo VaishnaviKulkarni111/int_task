@@ -1,17 +1,14 @@
-import { useState } from "react"
+
 import './options.css'
 
-const Options =(props) =>{
-   const [dropdn, showdropdn] = useState()
-
-    if(dropdn){
-        showdropdn(!dropdn) 
-    } 
-   
+const Options =({ showDropdn, toggleDropdn }) =>{
 
     return(
     <>
-    <select>
+     <button onClick={toggleDropdn}>
+        Filters
+      </button>
+    {showDropdn &&  <select>
 
         <option>Refine by</option> 
         <option>Date of Registration</option>
@@ -21,7 +18,7 @@ const Options =(props) =>{
         <option>Type of Business</option>
         <option>Location</option>
         <option>Assign to</option>
-    </select>
+    </select> }
     </>
     )
 }
