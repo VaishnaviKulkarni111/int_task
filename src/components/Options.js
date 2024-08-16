@@ -6,7 +6,7 @@ const Options =({ showDropdn, toggleDropdn }) =>{
     return(
     <>
      <button onClick={toggleDropdn}>
-        Filters
+        Filters 
       </button>
     {showDropdn &&  <select>
 
