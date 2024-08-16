@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     <Filter/>
-    <Options />
+    
     </>
    
   );
